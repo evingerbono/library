@@ -26,32 +26,35 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-        $kategoria = new Book();
-        $kategoria->id = $request->id;
-        $kategoria->Elnevezés = $request->Elnevezés;
-        $kategoria->save();
-        return redirect('/kategoria/list');
+        $book = new Book();
+        $book->author = $request->author;
+        $book->title = $request->title;
+        $book->pieces = $request->pieces;
+        $book->save();
+        return redirect('/book/list');
     }
     public function update(Request $request, $id)
     {
-        $kategoria=Book::find($id);
-        $kategoria->id = $request->id;
-        $kategoria->Elnevezés = $request->Elnevezés;
-        $kategoria->save();
-        return redirect('/kategoria/list');
+        $book=Book::find($id);
+        $book->author = $request->author;
+        $book->title = $request->title;
+        $book->pieces = $request->pieces;
+        $book->save();
+        return redirect('/book/list');
     }
 
-    public function editview ($id){
-        $kategoria = Book::find ($id); 
-        return view('kategoriak.edit', ['kategoria' => $kategoria]);
+    /*public function editview ($id){
+        $book = Book::find ($id); 
+        return view('books.edit', ['book' => $book]);
     }
     public function listview(){
-        $kategoria = Book::all(); 
-        return view('kategoriak.list', ['kategoria' => $kategoria]);
+        $book = Book::all(); 
+        return view('books.list', ['book' => $book]);
     } 
     public function newView(){
         $book = Book::all(); 
-        return view ('kategoriak.new', ['kategoria' => $book]); 
+        return view ('books.new', ['book' => $book]); 
     }
+    */
 }
 
