@@ -43,18 +43,18 @@ class BookController extends Controller
         return redirect('/book/list');
     }
 
-    /*public function editview ($id){
-        $book = Book::find ($id); 
-        return view('books.edit', ['book' => $book]);
+    public function editview ($id){
+        $books = Book::find ($id); 
+        return view('book.edit', ['book' => $books]);
     }
     public function listview(){
-        $book = Book::all(); 
-        return view('books.list', ['book' => $book]);
+        $books = Book::all(); 
+        return view('book.list', ['book' => $books]);
     } 
     public function newView(){
-        $book = Book::all(); 
-        return view ('books.new', ['book' => $book]); 
+        $books = Book::all(); 
+        return view ('books.new', ['book' => $books]); 
     }
-    */
+    
 }
 
