@@ -30,6 +30,42 @@ return new class extends Migration
             'author' => "Valakik", 
             'title' => 'valakik valahol'
         ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        Book::create([
+            'author' => "Valaki", 
+            'title' => 'valaki valahol', 
+            'pieces' => 10
+        ]);
+        
     }
 
     /**

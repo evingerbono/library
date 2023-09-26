@@ -1,4 +1,4 @@
-<form action="/api/book" method="POST">
+<form action="/api/book/new" method="POST">
     {{csrf_field()}}
     <div class="form-group">
         <input type="text" name="author" placeholder="Author">
