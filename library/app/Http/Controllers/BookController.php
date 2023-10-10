@@ -29,7 +29,6 @@ class BookController extends Controller
         $book = new Book();
         $book->author = $request->author;
         $book->title = $request->title;
-        $book->pieces = $request->pieces;
         $book->save();
         return redirect('/book/list');
     }
@@ -38,7 +37,6 @@ class BookController extends Controller
         $book=Book::find($id);
         $book->author = $request->author;
         $book->title = $request->title;
-        $book->pieces = $request->pieces;
         $book->save();
         return redirect('/book/list');
     }
